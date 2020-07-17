@@ -16,12 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //self.checkForLocationsRefreshMethod()
+        self.checkForLocationsRefreshMethod()
         
         return true
     }
     
     private func checkForLocationsRefreshMethod() {
+        //default is realtime
         if LocationsRefreshMethodManager.shared.currentRefreshMethod == .none {
             LocationsRefreshMethodManager.shared.setRefreshMethod(with: .realtime)
         }

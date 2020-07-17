@@ -35,4 +35,30 @@ class LocationService {
         }
     }
     
+    private var significantChangeRequestID : INTULocationRequestID?
+    
+    func subscribeToSignificantChangeInLocation(handler: @escaping ((_ lat: Double, _ lng: Double) -> ())) {
+        
+        let requestID = locationManager.subscribeToSignificantLocationChanges { (currentLocation, achievedAccuracy, status) in
+            if (status == INTULocationStatus.success) {
+                print("currentLocation \(String(describing: currentLocation))")
+                
+                if let currentLocation = currentLocation {
+                    handler(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
+                }
+            } else {
+                print("significant location change failed")
+            }
+        }
+        self.significantChangeRequestID = requestID
+        
+    }
+    
+    func stopMonitoringSignificantChangeInLocation() {
+        
+        if let requestID = significantChangeRequestID {
+            locationManager.cancelLocationRequest(requestID)
+        }
+    }
+    
 }

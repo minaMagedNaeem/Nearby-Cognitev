@@ -24,6 +24,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your permission to show locations near to you</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your permission to show locations near to you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your permission to show locations near to you</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

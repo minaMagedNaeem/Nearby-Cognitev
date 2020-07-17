@@ -29,13 +29,37 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.changeMethodButtonTitle()
         
-        self.loadData(withCoordinate: 40.7243, lng: -74.0018)
+        self.handleLocationService()
+        
+        //self.loadData(withCoordinate: 40.7243, lng: -74.0018)
         
         
     }
     
     @objc func handleLocationsRefreshMethodChange(Notification: NSNotification) {
         print("method changed to \(LocationsRefreshMethodManager.shared.currentRefreshMethod.rawValue)")
+        
+        self.changeMethodButtonTitle()
+        self.handleLocationService()
+    }
+    
+    func handleLocationService() {
+        switch LocationsRefreshMethodManager.shared.currentRefreshMethod {
+            
+        case .realtime:
+            LocationService.shared.subscribeToSignificantChangeInLocation { [weak self] (lat, lng) in
+                self?.loadData(withCoordinate: lat, lng: lng)
+            }
+        case .singleUpdate:
+            LocationService.shared.stopMonitoringSignificantChangeInLocation()
+            LocationService.shared.getLocation(success: { [weak self] (lat, lng) in
+                self?.loadData(withCoordinate: lat, lng: lng)
+            }) { [weak self] in
+                self?.showErrorView(type: .networkError)
+            }
+        case .none:
+            print("do nothing")
+        }
     }
     
     func changeMethodButtonTitle() {
