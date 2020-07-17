@@ -3,18 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5B0AE0BA24C1DDBF00CDEAC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0B924C1DDBF00CDEAC4 /* AppDelegate.swift */; };
-		5B0AE0BC24C1DDBF00CDEAC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0BB24C1DDBF00CDEAC4 /* SceneDelegate.swift */; };
-		5B0AE0BE24C1DDBF00CDEAC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0BD24C1DDBF00CDEAC4 /* ViewController.swift */; };
+		5B0AE0BE24C1DDBF00CDEAC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0BD24C1DDBF00CDEAC4 /* HomeViewController.swift */; };
 		5B0AE0C124C1DDBF00CDEAC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0AE0BF24C1DDBF00CDEAC4 /* Main.storyboard */; };
 		5B0AE0C324C1DDC100CDEAC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0AE0C224C1DDC100CDEAC4 /* Assets.xcassets */; };
 		5B0AE0C624C1DDC100CDEAC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0AE0C424C1DDC100CDEAC4 /* LaunchScreen.storyboard */; };
 		5B0AE0D124C1DDC100CDEAC4 /* NearByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0D024C1DDC100CDEAC4 /* NearByTests.swift */; };
 		5B0AE0DC24C1DDC100CDEAC4 /* NearByUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE0DB24C1DDC100CDEAC4 /* NearByUITests.swift */; };
+		5BCC50AD24C1F07C00CC1094 /* HomeLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50AC24C1F07C00CC1094 /* HomeLocationTableViewCell.swift */; };
+		5BCC50AF24C1F40B00CC1094 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50AE24C1F40B00CC1094 /* Constants.swift */; };
+		5BCC50B224C1F49B00CC1094 /* NearbyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50B124C1F49B00CC1094 /* NearbyProvider.swift */; };
+		5BCC50B424C1F82600CC1094 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50B324C1F82600CC1094 /* Extensions.swift */; };
+		5BCC50B724C1FCF300CC1094 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50B624C1FCF300CC1094 /* Enums.swift */; };
+		5BCC50BA24C1FE5700CC1094 /* LocationsRefreshMethodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50B924C1FE5700CC1094 /* LocationsRefreshMethodManager.swift */; };
+		5BCC50BC24C215E300CC1094 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC50BB24C215E300CC1094 /* EmptyView.xib */; };
+		5BCC50BE24C219D400CC1094 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50BD24C219D400CC1094 /* EmptyView.swift */; };
+		5D75193EB510DA03D8ABB626 /* Pods_NearByTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BDBB775B1482C1EADEE0BB /* Pods_NearByTests.framework */; };
+		BF7EF677FA0D548F180B5397 /* Pods_NearBy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88205E6C6A26ABE0833921D9 /* Pods_NearBy.framework */; };
+		FB916E77AF48E5743F89354C /* Pods_NearBy_NearByUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057287618AA3755EBA939849 /* Pods_NearBy_NearByUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057287618AA3755EBA939849 /* Pods_NearBy_NearByUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBy_NearByUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41DCD32D7CE7DE5944B0E467 /* Pods-NearBy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy.debug.xcconfig"; path = "Target Support Files/Pods-NearBy/Pods-NearBy.debug.xcconfig"; sourceTree = "<group>"; };
+		54FB5240F0A97D76939C1364 /* Pods-NearByTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearByTests.release.xcconfig"; path = "Target Support Files/Pods-NearByTests/Pods-NearByTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B0AE0B624C1DDBF00CDEAC4 /* NearBy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0AE0B924C1DDBF00CDEAC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B0AE0BB24C1DDBF00CDEAC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B0AE0BD24C1DDBF00CDEAC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B0AE0BD24C1DDBF00CDEAC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B0AE0C024C1DDBF00CDEAC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B0AE0C224C1DDC100CDEAC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B0AE0C524C1DDC100CDEAC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,20 @@
 		5B0AE0D724C1DDC100CDEAC4 /* NearByUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearByUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0AE0DB24C1DDC100CDEAC4 /* NearByUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByUITests.swift; sourceTree = "<group>"; };
 		5B0AE0DD24C1DDC100CDEAC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BCC50AC24C1F07C00CC1094 /* HomeLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocationTableViewCell.swift; sourceTree = "<group>"; };
+		5BCC50AE24C1F40B00CC1094 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BCC50B124C1F49B00CC1094 /* NearbyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyProvider.swift; sourceTree = "<group>"; };
+		5BCC50B324C1F82600CC1094 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5BCC50B624C1FCF300CC1094 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		5BCC50B924C1FE5700CC1094 /* LocationsRefreshMethodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRefreshMethodManager.swift; sourceTree = "<group>"; };
+		5BCC50BB24C215E300CC1094 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		5BCC50BD24C219D400CC1094 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		779448C5CDF70947B00BC6DD /* Pods-NearBy-NearByUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy-NearByUITests.debug.xcconfig"; path = "Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		88205E6C6A26ABE0833921D9 /* Pods_NearBy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3AFF4141D0D4FD8FD715CF /* Pods-NearBy-NearByUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy-NearByUITests.release.xcconfig"; path = "Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B5BDBB775B1482C1EADEE0BB /* Pods_NearByTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearByTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4BB3F6AB5215525BF3319C /* Pods-NearBy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy.release.xcconfig"; path = "Target Support Files/Pods-NearBy/Pods-NearBy.release.xcconfig"; sourceTree = "<group>"; };
+		EF2C9B402661D2686CFB4640 /* Pods-NearByTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearByTests.debug.xcconfig"; path = "Target Support Files/Pods-NearByTests/Pods-NearByTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7EF677FA0D548F180B5397 /* Pods_NearBy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D75193EB510DA03D8ABB626 /* Pods_NearByTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB916E77AF48E5743F89354C /* Pods_NearBy_NearByUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +112,8 @@
 				5B0AE0CF24C1DDC100CDEAC4 /* NearByTests */,
 				5B0AE0DA24C1DDC100CDEAC4 /* NearByUITests */,
 				5B0AE0B724C1DDBF00CDEAC4 /* Products */,
+				F1551D5FD7C1A45E3A5A75D9 /* Pods */,
+				66DAD70568F4272825FFBA7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +130,17 @@
 		5B0AE0B824C1DDBF00CDEAC4 /* NearBy */ = {
 			isa = PBXGroup;
 			children = (
+				5BCC50B024C1F48900CC1094 /* NearbyAPI */,
+				5BCC50AA24C1F03100CC1094 /* HomeViewController */,
 				5B0AE0B924C1DDBF00CDEAC4 /* AppDelegate.swift */,
-				5B0AE0BB24C1DDBF00CDEAC4 /* SceneDelegate.swift */,
-				5B0AE0BD24C1DDBF00CDEAC4 /* ViewController.swift */,
 				5B0AE0BF24C1DDBF00CDEAC4 /* Main.storyboard */,
 				5B0AE0C224C1DDC100CDEAC4 /* Assets.xcassets */,
 				5B0AE0C424C1DDC100CDEAC4 /* LaunchScreen.storyboard */,
 				5B0AE0C724C1DDC100CDEAC4 /* Info.plist */,
+				5BCC50AE24C1F40B00CC1094 /* Constants.swift */,
+				5BCC50B324C1F82600CC1094 /* Extensions.swift */,
+				5BCC50B624C1FCF300CC1094 /* Enums.swift */,
+				5BCC50B924C1FE5700CC1094 /* LocationsRefreshMethodManager.swift */,
 			);
 			path = NearBy;
 			sourceTree = "<group>";
@@ -128,6 +163,64 @@
 			path = NearByUITests;
 			sourceTree = "<group>";
 		};
+		5BCC50AA24C1F03100CC1094 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC50B824C1FE1400CC1094 /* EmptyView */,
+				5BCC50AB24C1F03F00CC1094 /* LocationCell */,
+				5B0AE0BD24C1DDBF00CDEAC4 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		5BCC50AB24C1F03F00CC1094 /* LocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC50AC24C1F07C00CC1094 /* HomeLocationTableViewCell.swift */,
+			);
+			path = LocationCell;
+			sourceTree = "<group>";
+		};
+		5BCC50B024C1F48900CC1094 /* NearbyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC50B124C1F49B00CC1094 /* NearbyProvider.swift */,
+			);
+			path = NearbyAPI;
+			sourceTree = "<group>";
+		};
+		5BCC50B824C1FE1400CC1094 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC50BB24C215E300CC1094 /* EmptyView.xib */,
+				5BCC50BD24C219D400CC1094 /* EmptyView.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		66DAD70568F4272825FFBA7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88205E6C6A26ABE0833921D9 /* Pods_NearBy.framework */,
+				057287618AA3755EBA939849 /* Pods_NearBy_NearByUITests.framework */,
+				B5BDBB775B1482C1EADEE0BB /* Pods_NearByTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1551D5FD7C1A45E3A5A75D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41DCD32D7CE7DE5944B0E467 /* Pods-NearBy.debug.xcconfig */,
+				BC4BB3F6AB5215525BF3319C /* Pods-NearBy.release.xcconfig */,
+				779448C5CDF70947B00BC6DD /* Pods-NearBy-NearByUITests.debug.xcconfig */,
+				9C3AFF4141D0D4FD8FD715CF /* Pods-NearBy-NearByUITests.release.xcconfig */,
+				EF2C9B402661D2686CFB4640 /* Pods-NearByTests.debug.xcconfig */,
+				54FB5240F0A97D76939C1364 /* Pods-NearByTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0AE0E024C1DDC100CDEAC4 /* Build configuration list for PBXNativeTarget "NearBy" */;
 			buildPhases = (
+				B9263D05E3407C248B31793B /* [CP] Check Pods Manifest.lock */,
 				5B0AE0B224C1DDBF00CDEAC4 /* Sources */,
 				5B0AE0B324C1DDBF00CDEAC4 /* Frameworks */,
 				5B0AE0B424C1DDBF00CDEAC4 /* Resources */,
+				3E42387072ECC09BD3359362 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0AE0E324C1DDC100CDEAC4 /* Build configuration list for PBXNativeTarget "NearByTests" */;
 			buildPhases = (
+				5F79EA295C7C3A50D6F39321 /* [CP] Check Pods Manifest.lock */,
 				5B0AE0C824C1DDC100CDEAC4 /* Sources */,
 				5B0AE0C924C1DDC100CDEAC4 /* Frameworks */,
 				5B0AE0CA24C1DDC100CDEAC4 /* Resources */,
@@ -170,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0AE0E624C1DDC100CDEAC4 /* Build configuration list for PBXNativeTarget "NearByUITests" */;
 			buildPhases = (
+				FA02B778C67BCDD2CA4E4721 /* [CP] Check Pods Manifest.lock */,
 				5B0AE0D324C1DDC100CDEAC4 /* Sources */,
 				5B0AE0D424C1DDC100CDEAC4 /* Frameworks */,
 				5B0AE0D524C1DDC100CDEAC4 /* Resources */,
+				456DE7D76D6D85E89E0486B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCC50BC24C215E300CC1094 /* EmptyView.xib in Resources */,
 				5B0AE0C624C1DDC100CDEAC4 /* LaunchScreen.storyboard in Resources */,
 				5B0AE0C324C1DDC100CDEAC4 /* Assets.xcassets in Resources */,
 				5B0AE0C124C1DDBF00CDEAC4 /* Main.storyboard in Resources */,
@@ -254,14 +353,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E42387072ECC09BD3359362 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearBy/Pods-NearBy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearBy/Pods-NearBy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NearBy/Pods-NearBy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		456DE7D76D6D85E89E0486B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F79EA295C7C3A50D6F39321 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearByTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9263D05E3407C248B31793B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearBy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA02B778C67BCDD2CA4E4721 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearBy-NearByUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B0AE0B224C1DDBF00CDEAC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B0AE0BE24C1DDBF00CDEAC4 /* ViewController.swift in Sources */,
+				5BCC50B224C1F49B00CC1094 /* NearbyProvider.swift in Sources */,
+				5BCC50BE24C219D400CC1094 /* EmptyView.swift in Sources */,
+				5BCC50B424C1F82600CC1094 /* Extensions.swift in Sources */,
+				5B0AE0BE24C1DDBF00CDEAC4 /* HomeViewController.swift in Sources */,
+				5BCC50AD24C1F07C00CC1094 /* HomeLocationTableViewCell.swift in Sources */,
+				5BCC50B724C1FCF300CC1094 /* Enums.swift in Sources */,
+				5BCC50BA24C1FE5700CC1094 /* LocationsRefreshMethodManager.swift in Sources */,
 				5B0AE0BA24C1DDBF00CDEAC4 /* AppDelegate.swift in Sources */,
-				5B0AE0BC24C1DDBF00CDEAC4 /* SceneDelegate.swift in Sources */,
+				5BCC50AF24C1F40B00CC1094 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +640,7 @@
 		};
 		5B0AE0E124C1DDC100CDEAC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41DCD32D7CE7DE5944B0E467 /* Pods-NearBy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +659,7 @@
 		};
 		5B0AE0E224C1DDC100CDEAC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4BB3F6AB5215525BF3319C /* Pods-NearBy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +678,7 @@
 		};
 		5B0AE0E424C1DDC100CDEAC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF2C9B402661D2686CFB4640 /* Pods-NearByTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +701,7 @@
 		};
 		5B0AE0E524C1DDC100CDEAC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FB5240F0A97D76939C1364 /* Pods-NearByTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +724,7 @@
 		};
 		5B0AE0E724C1DDC100CDEAC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779448C5CDF70947B00BC6DD /* Pods-NearBy-NearByUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +745,7 @@
 		};
 		5B0AE0E824C1DDC100CDEAC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3AFF4141D0D4FD8FD715CF /* Pods-NearBy-NearByUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
