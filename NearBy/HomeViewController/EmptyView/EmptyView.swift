@@ -17,10 +17,10 @@ class EmptyView: UIView {
         didSet {
             switch alertState {
             case .networkError:
-                alertImageView.image = #imageLiteral(resourceName: "something_wrong")
+                alertImageView.image = #imageLiteral(resourceName: "alert")
                 alertLabel.text = "No data found!"
             case .noData:
-                alertImageView.image = #imageLiteral(resourceName: "alert")
+                alertImageView.image = #imageLiteral(resourceName: "something_wrong")
                 alertLabel.text = "Something went wrong!"
             case .none:
                 alertImageView.image = nil

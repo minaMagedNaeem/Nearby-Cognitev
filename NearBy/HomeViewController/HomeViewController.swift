@@ -60,7 +60,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             switch result {
             case .success(let response):
-                self?.showErrorView(type: .noData)
+                
+                guard let json = try? response.mapJSON() as? [String:Any] else {
+                    self?.showErrorView(type: .noData)
+                    return
+                }
+                
+                print(json)
+                
+                
             case .failure(let error):
                 print(error.localizedDescription)
                 self?.showErrorView(type: .networkError)
