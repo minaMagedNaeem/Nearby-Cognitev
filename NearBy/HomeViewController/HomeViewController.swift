@@ -20,6 +20,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             theTableView.tableFooterView = UIView(frame: .zero) //put to disable cell separators when tableview is empty
         }
     }
+    
+    var venues : [Venue] = [] {
+        didSet {
+            if venues.count == 0 {
+                self.showErrorView(type: .noData)
+            } else {
+                self.removeErrorView()
+            }
+            self.theTableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +84,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func loadData(withCoordinate lat: Double, lng: Double) {
         
-        theTableView.backgroundView = nil
+        self.removeErrorView()
         self.view.startProgressAnim()
         
         nearbyProvider.request(.getLocations(latitude: lat, longitude: lng)) {[weak self] (result) in
@@ -83,11 +94,30 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             case .success(let response):
                 
                 guard let json = try? response.mapJSON() as? [String:Any] else {
-                    self?.showErrorView(type: .noData)
+                    self?.showErrorView(type: .networkError)
                     return
                 }
                 
                 print(json)
+                
+                var venuesToBeSet : [Venue] = []
+                
+                if let response = json["response"] as? [String:Any] {
+                    if let groups = response["groups"] as? [[String:Any]] {
+                        for group in groups {
+                            if let items = group["items"] as? [[String:Any]] {
+                                for item in items {
+                                    if let venueDict = item["venue"] as? [String:Any] {
+                                        venuesToBeSet.append(Venue.init(venueDict: venueDict))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                print(venuesToBeSet)
+                self?.venues = venuesToBeSet
                 
                 
             case .failure(let error):
@@ -100,6 +130,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func showErrorView(type: AlertViewType) {
         theTableView.backgroundView = EmptyView.getAlertView(state: type)
     }
+    
+    func removeErrorView() {
+        theTableView.backgroundView = nil
+    }
 
     @IBAction func didPressLocationsRefreshButton(_ sender: Any) {
         
@@ -111,11 +145,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.venues.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeLocationTableViewCell
+        cell.venue = venues[indexPath.row]
+        
+        return cell
     }
     
     deinit {

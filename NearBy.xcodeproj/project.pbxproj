@@ -23,6 +23,7 @@
 		5BCC50BC24C215E300CC1094 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC50BB24C215E300CC1094 /* EmptyView.xib */; };
 		5BCC50BE24C219D400CC1094 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50BD24C219D400CC1094 /* EmptyView.swift */; };
 		5BCC50C124C2247C00CC1094 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50C024C2247C00CC1094 /* LocationService.swift */; };
+		5BCC50C524C2433B00CC1094 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC50C424C2433B00CC1094 /* Venue.swift */; };
 		5D75193EB510DA03D8ABB626 /* Pods_NearByTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BDBB775B1482C1EADEE0BB /* Pods_NearByTests.framework */; };
 		BF7EF677FA0D548F180B5397 /* Pods_NearBy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88205E6C6A26ABE0833921D9 /* Pods_NearBy.framework */; };
 		FB916E77AF48E5743F89354C /* Pods_NearBy_NearByUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057287618AA3755EBA939849 /* Pods_NearBy_NearByUITests.framework */; };
@@ -71,6 +72,7 @@
 		5BCC50BB24C215E300CC1094 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		5BCC50BD24C219D400CC1094 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		5BCC50C024C2247C00CC1094 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		5BCC50C424C2433B00CC1094 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		779448C5CDF70947B00BC6DD /* Pods-NearBy-NearByUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy-NearByUITests.debug.xcconfig"; path = "Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		88205E6C6A26ABE0833921D9 /* Pods_NearBy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3AFF4141D0D4FD8FD715CF /* Pods-NearBy-NearByUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBy-NearByUITests.release.xcconfig"; path = "Target Support Files/Pods-NearBy-NearByUITests/Pods-NearBy-NearByUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		5B0AE0B824C1DDBF00CDEAC4 /* NearBy */ = {
 			isa = PBXGroup;
 			children = (
+				5BCC50C324C2432500CC1094 /* Models */,
 				5BCC50BF24C2246400CC1094 /* Services */,
 				5BCC50B024C1F48900CC1094 /* NearbyAPI */,
 				5BCC50AA24C1F03100CC1094 /* HomeViewController */,
@@ -207,6 +210,14 @@
 				5BCC50C024C2247C00CC1094 /* LocationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5BCC50C324C2432500CC1094 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC50C424C2433B00CC1094 /* Venue.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		66DAD70568F4272825FFBA7B /* Frameworks */ = {
@@ -476,6 +487,7 @@
 				5BCC50BE24C219D400CC1094 /* EmptyView.swift in Sources */,
 				5BCC50C124C2247C00CC1094 /* LocationService.swift in Sources */,
 				5BCC50B424C1F82600CC1094 /* Extensions.swift in Sources */,
+				5BCC50C524C2433B00CC1094 /* Venue.swift in Sources */,
 				5B0AE0BE24C1DDBF00CDEAC4 /* HomeViewController.swift in Sources */,
 				5BCC50AD24C1F07C00CC1094 /* HomeLocationTableViewCell.swift in Sources */,
 				5BCC50B724C1FCF300CC1094 /* Enums.swift in Sources */,

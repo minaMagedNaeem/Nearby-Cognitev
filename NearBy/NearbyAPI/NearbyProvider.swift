@@ -44,8 +44,8 @@ enum NearbyAPI : TargetType {
             let radius = Constants.RADIUS
             
             let versioning = self.getVersioning()
-            
-            return .requestParameters(parameters: ["client_id":clientID, "client_secret":clientSecret, "v":versioning, "radius":radius, "sortByDistance":1, "ll":"\(latitude),\(longitude)"], encoding: URLEncoding.default)
+            //40.7243, lng: -74.0018
+            return .requestParameters(parameters: ["client_id":clientID, "client_secret":clientSecret, "v":versioning, "radius":radius, "sortByDistance":1, "ll":"\(40.7243),\(-74.0018)"], encoding: URLEncoding.default)
         }
     }
     
