@@ -42,7 +42,7 @@ class LocationService {
         let requestID = locationManager.subscribeToSignificantLocationChanges { (currentLocation, achievedAccuracy, status) in
             if (status == INTULocationStatus.success) {
                 print("currentLocation \(String(describing: currentLocation))")
-                
+                print("significant change works")
                 if let currentLocation = currentLocation {
                     handler(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
                 }
@@ -57,6 +57,7 @@ class LocationService {
     func stopMonitoringSignificantChangeInLocation() {
         
         if let requestID = significantChangeRequestID {
+            print("unsubscribed location subscription")
             locationManager.cancelLocationRequest(requestID)
         }
     }
