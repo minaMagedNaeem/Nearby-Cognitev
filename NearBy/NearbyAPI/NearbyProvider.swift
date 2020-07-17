@@ -13,6 +13,7 @@ import Result
 enum NearbyAPI : TargetType {
     
     case getLocations(latitude: Double, longitude: Double)
+    case getImage(venueID: String)
     
     public var baseURL: URL {
         return URL.init(string: "https://api.foursquare.com/v2")!
@@ -22,12 +23,14 @@ enum NearbyAPI : TargetType {
         switch self {
         case .getLocations:
             return "/venues/explore"
+        case .getImage(let venueID):
+            return "/venues/\(venueID)/photos"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .getLocations:
+        case .getLocations, .getImage:
             return .get
         }
     }
@@ -37,21 +40,26 @@ enum NearbyAPI : TargetType {
     }
 
     public var task: Task {
+        let clientID = Constants.CLIENT_ID
+        let clientSecret = Constants.CLIENT_SECRET
+        let versioning = self.getVersioning()
+        
         switch self {
         case .getLocations(let latitude, let longitude):
-            let clientID = Constants.CLIENT_ID
-            let clientSecret = Constants.CLIENT_SECRET
+            
             let radius = Constants.RADIUS
             
-            let versioning = self.getVersioning()
             //40.7243, lng: -74.0018
-            return .requestParameters(parameters: ["client_id":clientID, "client_secret":clientSecret, "v":versioning, "radius":radius, "sortByDistance":1, "ll":"\(40.7243),\(-74.0018)"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["client_id":clientID, "client_secret":clientSecret, "v":versioning, "radius":radius, "sortByDistance":1, "ll":"\(latitude),\(longitude)"], encoding: URLEncoding.default)
+            case .getImage:
+                return .requestParameters(parameters: ["client_id":clientID, "client_secret":clientSecret, "v":versioning], encoding: URLEncoding.default)
         }
+        
     }
     
     public var isSilent : Bool {
         switch self {
-        case .getLocations:
+        case .getLocations, .getImage:
             return true
         }
     }
@@ -60,7 +68,7 @@ enum NearbyAPI : TargetType {
         let headers : [String:String] = [:]
         
         switch self {
-        case .getLocations:
+        case .getLocations, .getImage:
             return headers
         }
     }
