@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             theTableView.delegate = self
             theTableView.dataSource = self
             
-            theTableView.tableFooterView = UIView(frame: .zero)
+            theTableView.tableFooterView = UIView(frame: .zero) //put to disable cell separators when tableview is empty
         }
     }
 
@@ -30,9 +30,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.changeMethodButtonTitle()
         
         self.handleLocationService()
-        
-        //self.loadData(withCoordinate: 40.7243, lng: -74.0018)
-        
         
     }
     

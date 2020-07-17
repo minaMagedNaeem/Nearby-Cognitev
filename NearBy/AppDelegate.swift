@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationWillTerminate(_ application: UIApplication) {
+        LocationService.shared.stopMonitoringSignificantChangeInLocation()
+        //left intentionally to stop location service as we do not want it to run in the background
+    }
+    
     private func checkForLocationsRefreshMethod() {
         //default is realtime
         if LocationsRefreshMethodManager.shared.currentRefreshMethod == .none {
